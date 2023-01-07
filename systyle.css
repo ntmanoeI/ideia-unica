@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 1px;
+}
+
+.container{
+    display: grid;                       /*tela dividida em grade*/
+    height: 100vh;
+    grid-template-columns: 0.7fr 1.1fr 1.1fr 1.1fr;     /*separa a tela em colunas*/
+    grid-template-rows: 0.3fr 2.5fr 1fr 0.2fr;          /*separa a tela em grades*/
+    grid-template-areas: "nav nav nav nav"              /*organiza as areas da grade e colunas*/
+                         "sidebar main main main"            
+                         "sidebar content1 content2 content3"
+                         "sidebar footer footer footer";
+    grid-gap: 0.5em;
+    
+}
+
+#nav{
+    display: flex;                            
+    justify-content: space-between;                  /*coloca os itens no canto*/
+    background-color: rgba(241, 182, 217, 0.404);
+    grid-area: nav;                                  /*diz em qual lugar da coluna ou grade o conteudo vai ficar*/
+    border-radius: 0.5em;
+    align-items: center;
+   
+}
+
+#nav img{
+    width: 200px;
+    height: 100px;
+}
+
+#menu a{                          /*lembrando que esse "a" nesse seletor se refere a tag <a>*/
+    font-weight: 600;
+    margin-left: 20px;
+    padding: 15px;
+    color: black ;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+#sidebar{
+    font-style: oblique;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 53px;
+    text-align: center;
+    
+    
+    background-color:  rgba(241, 182, 217, 0.404);
+    grid-area: sidebar;
+    border-radius: 0.5em;
+}
+
+a{
+    font-size: 10px;
+}
+#main{
+   
+    
+    background-color: rgb(255, 255, 255);
+    grid-area: main;
+    border-start-start-radius: 10px;         /*aredondar as bordas*/
+    border-start-end-radius: 10px;
+    
+}
+
+.container2{
+    align-items: center;
+    display: grid;
+    height: 290px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: "img h2 h2" 
+                         "img p p" 
+                         "img p p";
+}
+
+#main img{
+
+    grid-area: img;
+    border-radius: 10px;
+    padding: 5px 0px 0px 5px;
+    width: 520px;
+    height: 270px;
+    
+
+}
+
+p{ 
+    grid-area: p;
+    font-size: 20px ;
+}
+
+h2{ 
+    grid-area: h2;
+    padding: 0;
+    border: 0;
+    
+    height: 0;
+}
+
+#content1{
+    
+    text-align: center;
+background-color: lightskyblue;
+grid-area: content1;
+border-end-start-radius: 10px;
+}
+
+#content2{
+    text-align: center;
+background-color: lightgray;
+grid-area: content2;
+}
+
+#content3{
+    text-align: center;
+background-color: lightgreen;
+grid-area: content3;
+border-end-end-radius: 10px;
+}
+
+#footer{
+    font-size: x-small;
+    padding: 0px 500px 0px 500px;
+    display: flex;
+    justify-content: space-between;
+    
+background-color: rgba(241, 182, 217, 0.404);
+grid-area: footer;
+border-radius: 0.5em;
+}
+
+.logoinsta{
+    padding-top: 10px ;
+}
+
+.logoface{
+    margin-top: 2px;
+}
+
+.logozap{
+    margin-top: -5px;
+    margin-left: -15px;
+}
+
+.txtrodape{
+    display: block;
+    text-align: justify;
+}
